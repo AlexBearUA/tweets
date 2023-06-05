@@ -1,2 +1,2 @@
-export const convertNumber = number =>
-  number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+import numeral from "numeral";
+export const convertNumber = (number) => numeral(number).format("0,0");
