@@ -1,6 +1,6 @@
-import { UserCard } from 'components/UserCard/UserCard';
+import { UserCard } from "../UserCard/UserCard";
 
-import css from './UsersList.module.scss';
+import css from "./UsersList.module.scss";
 
 export const UsersList = ({ users }) => {
   return (

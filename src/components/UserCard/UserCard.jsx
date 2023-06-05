@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { toast } from 'react-hot-toast';
-import { useUpdateUserMutation } from 'redux/usersAPI';
-import { convertNumber } from 'helpers/convertNumber';
-import css from './UserCard.module.scss';
+import { useEffect } from "react";
+import { toast } from "react-hot-toast";
+import { useUpdateUserMutation } from "../../redux/usersAPI";
+import { convertNumber } from "../../helpers/convertNumber";
+import css from "./UserCard.module.scss";
 
 export const UserCard = ({
   user,

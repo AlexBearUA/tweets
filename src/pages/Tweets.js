@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Select from 'react-select';
-import { UsersList } from '../components/UsersList/UsersList';
-import { Loader } from 'components/Loaders/Loader';
-import { ErrorMessage } from 'components/ErrorMessage/ErrorMessage';
-import { useGetUsersQuery } from 'redux/usersAPI';
-import { getFilteredUsers } from 'helpers/getFilteredUsers';
-import css from './Tweets.module.scss';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Select from "react-select";
+import { UsersList } from "../components/UsersList/UsersList";
+import { Loader } from "../components/Loaders/Loader";
+import { ErrorMessage } from "../components/ErrorMessage/ErrorMessage";
+import { useGetUsersQuery } from "../redux/usersAPI";
+import { getFilteredUsers } from "../helpers/getFilteredUsers";
+import css from "./Tweets.module.scss";
 
 const Tweets = () => {
   const [page, setPage] = useState(1);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [selectedOption, setSelectedOption] = useState({
-    label: 'Show all',
-    value: 'all',
+    label: "Show all",
+    value: "all",
   });
   const { data: users, isFetching, isError } = useGetUsersQuery(page);
   const options = [
-    { value: 'all', label: 'Show all' },
-    { value: 'follow', label: 'Follow' },
-    { value: 'followings', label: 'Followings' },
+    { value: "all", label: "Show all" },
+    { value: "follow", label: "Follow" },
+    { value: "followings", label: "Followings" },
   ];
 
   useEffect(() => {
