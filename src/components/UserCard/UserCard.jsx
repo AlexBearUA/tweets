@@ -31,18 +31,16 @@ export const UserCard = ({
   useEffect(() => {
     isSuccess && !following && toast.success(`You are following ${user} now`);
     isSuccess && following && toast.success(`You stoped following ${user}`);
-    isError && !following && toast.error(`Ooops, something going wrong...`);
-    isError && following && toast.error(`Ooops, something going wrong...`);
+    isError && toast.error(`Ooops, something going wrong...`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSuccess, isError]);
 
   return (
     <div className={css.userCard}>
       <p className={css.userName}>{user}</p>
-      <div className={css.avatarThumb}>
+      <div className={css.avatarDekor}>
         <img className={css.avatar} src={avatar} alt="avatar" />
       </div>
-      <span className={css.dekorLine}></span>
       <p className={css.cardText}>{convertNumber(tweets)} tweets</p>
       <p className={css.cardText}>{convertNumber(followres)} followers</p>
 
