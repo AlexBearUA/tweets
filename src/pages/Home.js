@@ -1,4 +1,4 @@
-import css from './Home.module.scss';
+import css from "./Home.module.scss";
 const Home = () => {
   return (
     <div className={css.homePage}>

@@ -8,7 +8,7 @@
   width: 196px;
   margin: 0 auto;
   padding: 14px 56px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
   width: 50px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -65,4 +65,11 @@
 .select {
   border: 3px solid #5736a3;
   border-radius: 7px;
+}
+
+.selectAlert {
+  color: #5736a3;
+  font-size: 35px;
+  text-align: center;
+  margin: 250px 0 250px 0;
 }
