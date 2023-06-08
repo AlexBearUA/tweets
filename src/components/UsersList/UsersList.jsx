@@ -6,12 +6,12 @@ export const UsersList = ({ users }) => {
   return (
     <ul className={css.usersList}>
       {users &&
-        users.map(({ user, tweets, followres, avatar, id, following }) => (
+        users.map(({ user, tweets, followers, avatar, id, following }) => (
           <li key={id}>
             <UserCard
               user={user}
               tweets={tweets}
-              followres={followres}
+              followers={followers}
               avatar={avatar}
               id={id}
               following={following}

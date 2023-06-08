@@ -7,7 +7,7 @@ import css from "./UserCard.module.scss";
 export const UserCard = ({
   user,
   tweets,
-  followres,
+  followers,
   avatar,
   following,
   id,
@@ -16,15 +16,10 @@ export const UserCard = ({
     useUpdateUserMutation();
 
   const handleFollowingStatus = () => {
-    const followingStatus = !following;
-    const updatedFollowersAmount = followingStatus
-      ? (followres += 1)
-      : (followres -= 1);
-
     updateUser({
       id,
-      updatedFollowersAmount,
-      followingStatus,
+      following: !following,
+      followers: !following ? (followers += 1) : (followers -= 1),
     });
   };
 
@@ -38,11 +33,11 @@ export const UserCard = ({
   return (
     <div className={css.userCard}>
       <p className={css.userName}>{user}</p>
-      <div className={css.avatarDekor}>
+      <div className={css.avatarThumb}>
         <img className={css.avatar} src={avatar} alt="avatar" />
       </div>
       <p className={css.cardText}>{convertNumber(tweets)} tweets</p>
-      <p className={css.cardText}>{convertNumber(followres)} followers</p>
+      <p className={css.cardText}>{convertNumber(followers)} followers</p>
 
       {following ? (
         <button
